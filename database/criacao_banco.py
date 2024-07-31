@@ -147,7 +147,21 @@ def main():
     conn.commit()
 
     # Popular as tabelas
-    popular_tabelas(mycursor)
+    while True:
+        resposta = input("Quer deixar as tabelas populadas? (Y)").strip().upper()
+
+        if resposta == 'Y':
+            popular_tabelas(mycursor)
+            break
+        elif resposta == '':
+            popular_tabelas(mycursor)
+            break
+        elif resposta == 'N':
+            print("Operação cancelada!")
+            break
+        else:
+            print("Entrada inválida. Por favor, digite 'Y' ou 'N'.")
+    
 
     # Commit das transações
     conn.commit()
