@@ -92,8 +92,8 @@ def popular_tabelas(mycursor):
     # Popula a tabela Usuario
     mycursor.execute("""
         INSERT INTO usuario (nome_inteiro, nome_usuario, email, senha, tipo) VALUES
-        ('João Silva', 'joaos', 'joao@example.com', 'senha123', 1),
-        ('Maria Oliveira', 'mariao', 'maria@example.com', 'senha123', 2);
+        ('Gabriel Patara', 'gabriel', 'joao@example.com', '123', 1),
+        ('Leticia Palomino', 'leticia', 'maria@example.com', '123', 2);
     """)
     print("Tabela de usuários foi populada.")
 
